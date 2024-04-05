@@ -14,4 +14,8 @@
 -- | 2020 | 30       |
 -- +------+----------+
 
-
+select 
+year,
+count(distinct name) numebr
+from teams
+group by 1;

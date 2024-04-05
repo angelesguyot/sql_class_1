@@ -1,5 +1,11 @@
 -- For each team, what is the average number of wins per season, in the 21st century?
 
+select
+name,
+avg (wins) ganados
+from teams
+where year >2000
+group by 1;
 -- Expected result:
 --
 -- +-------------------------------+------------------+
