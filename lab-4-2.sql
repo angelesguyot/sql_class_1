@@ -6,7 +6,16 @@
 -- AND column2 = expression2
 
 -- Expected result: 47 rows starting with
---
+select
+first_name,
+last_name
+From players p
+left join stats s
+on p.id=s.player_id
+left join teams t
+on t.id=s.team_id
+where t.name = 'Chicago Cubs' and t.year = '2020'
+;
 -- +------------+-----------+
 -- | Jason      | Adam      |
 -- | Albert     | Almora    |
